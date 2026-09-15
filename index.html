@@ -51,6 +51,21 @@ ol li::before {
   font-weight: 700;
   color: var(--blush);
 }
+ul.choice {
+  list-style: none;
+  margin: .7rem 0 .7rem;
+  padding: 0;
+}
+ul.choice li {
+  /* these sit inside the <ol>, so they would otherwise pick up its step
+     counter and its hanging number, pushing step 3 to "(5)" */
+  counter-increment: none;
+  position: static;
+  padding: .5rem .8rem;
+  margin-bottom: .4rem;
+  background: var(--band);
+}
+ul.choice li::before { content: none; }
 a { color: #8c4a44; font-weight: 600; }
 a:hover, a:focus { color: var(--slate); }
 .closing {
@@ -83,14 +98,19 @@ can sign up to our study in three easy steps.</p>
   already have one. To do so, click
   <a href="https://umassxling.sona-systems.com/">HERE</a>. Click
   &ldquo;Request Account.&rdquo; Enter your information, and for the drop-down
-  menu under &ldquo;courses,&rdquo; select &ldquo;Non-course
-  compensation.&rdquo; If you already have a linguistics SONA account, go to
-  step&nbsp;(2).</li>
+  menu under &ldquo;courses,&rdquo; select &ldquo;Non-course compensation&rdquo;
+  if you want to be paid, or select the course you are earning credit for. If
+  you already have a linguistics SONA account, go to step&nbsp;(2).</li>
 
-  <li>Once you log in to your new account, you should be directed to our study
-  (if not, click <a href="https://umassxling.sona-systems.com/">HERE</a> after
-  you have logged in). The name of our study is &ldquo;EEG During Language
-  Processing.&rdquo;</li>
+  <li>Once you have logged in, open the listing that matches how you want to be
+  compensated:
+  <ul class="choice">
+    <li><a href="https://umassxling.sona-systems.com/exp_info.aspx?experiment_id=93">EEG
+    During Language Processing <b>[PAID]</b></a></li>
+    <li><a href="https://umassxling.sona-systems.com/exp_info.aspx?experiment_id=92">EEG
+    During Language Processing <b>[COURSE CREDIT]</b></a></li>
+  </ul>
+  The session itself is the same either way.</li>
 
   <li>Find a time slot that works for you, and book it! If you cannot find a
   time slot that works for you, you can send us your availability
