@@ -19,29 +19,32 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 0 1rem 4rem;
+  /* phone first. On a 320px screen the page frame, the panel padding and the
+     step gutter together were taking 90px, leaving a very ragged measure. */
+  padding: .85rem .75rem 3rem;
   background: var(--teal);
   color: var(--slate);
   font-family: Montserrat, "Segoe UI", system-ui, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
 }
 main {
   max-width: 44rem;
   margin: 0 auto;
   background: var(--cream);
-  padding: 2rem 1.5rem 2.5rem;
+  padding: 1.6rem 1.15rem 1.9rem;
 }
 header { border-bottom: 6px solid var(--blush); padding-bottom: 1rem; }
-h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .4rem; }
 .study { font-weight: 600; color: var(--slate); margin: 0; }
-.lede { font-size: 1.15rem; margin: 1.6rem 0 2rem; }
+.lede { font-size: 1.1rem; margin: 1.4rem 0 1.7rem; }
 ol { list-style: none; counter-reset: step; margin: 0; padding: 0; }
 ol li {
   counter-increment: step;
   position: relative;
-  padding-left: 3.1rem;
-  margin-bottom: 1.6rem;
+  padding-left: 2.2rem;
+  margin-bottom: 1.4rem;
 }
 ol li::before {
   content: "(" counter(step) ")";
@@ -66,12 +69,12 @@ ul.choice li {
   background: var(--band);
 }
 ul.choice li::before { content: none; }
-a { color: #8c4a44; font-weight: 600; }
+a { color: #8c4a44; font-weight: 600; overflow-wrap: break-word; }
 a:hover, a:focus { color: var(--slate); }
 .closing {
   background: var(--band);
-  padding: 1.25rem 1.4rem;
-  margin-top: 2.5rem;
+  padding: 1.1rem 1.15rem;
+  margin-top: 2rem;
 }
 .closing p { margin: 0 0 .8rem; }
 .closing p:last-child { margin-bottom: 0; }
@@ -79,6 +82,10 @@ a:hover, a:focus { color: var(--slate); }
   body { padding: 2.5rem 2rem 5rem; }
   main { padding: 3rem 3.5rem 3.5rem; }
   h1 { font-size: 2.4rem; }
+  .lede { font-size: 1.15rem; margin: 1.6rem 0 2rem; }
+  ol li { padding-left: 3.1rem; margin-bottom: 1.6rem; }
+  ul.choice li { padding: .5rem .8rem; }
+  .closing { padding: 1.25rem 1.4rem; margin-top: 2.5rem; }
 }
 </style>
 </head>
