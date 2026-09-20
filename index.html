@@ -72,6 +72,9 @@ ul.choice li::before { content: none; }
 a { color: #8c4a44; font-weight: 600; overflow-wrap: break-word; }
 a:hover, a:focus { color: var(--slate); }
 ol li p { margin: .9rem 0 0; }
+/* so #directions does not land flush against the top of the window */
+ol li[id] { scroll-margin-top: 1rem; }
+ol li[id]:target { background: var(--band); box-shadow: 0 0 0 .7rem var(--band); }
 figure.map { margin: 1.5rem 0 0; }
 figure.map a { display: block; border: 1px solid rgba(75, 82, 87, .3); background: #fff; }
 figure.map img { display: block; width: 100%; height: auto; }
@@ -117,9 +120,11 @@ can sign up to our study in a few easy steps.</p>
 
   <li>Find a time slot that works for you, and book it!</li>
 
-  <li>We are looking forward to seeing you in the lab! Our lab is located in the
-  Integrative Learning Center (near the student union and the student center),
-  and the room number is ILC&nbsp;N446.
+  <li id="directions">We are looking forward to seeing you in the lab! Our lab
+  is located in the Integrative Learning Center (near the student union and the
+  student center), and the room number is ILC&nbsp;N446. If your appointment is
+  outside of business hours and the ILC building is locked, the experimenter
+  will meet you at the front double doors facing North Pleasant Street.
 
   <figure class="map">
     <a href="ilc4-plan.png">
